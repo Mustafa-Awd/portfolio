@@ -1,0 +1,284 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
+:root {
+  --main-color: #00ff87;
+  --background: #f5f7f8;
+  --secondary-background: #173b45;
+  --text-color: black;
+  --text-color2: aliceblue;
+  --main-p-color: lightslategray;
+  --border-color: var(--main-color);
+  --glass-border: white;
+  --footer-link: var(--main-color);
+}
+
+html,
+body {
+  background: var(--background);
+  font-family: "Zain", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  color: var(--text-color);
+  flex-wrap: wrap;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* ---------- Main ---------- */
+main {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 80vh;
+  background-color: var(--secondary-background);
+  color: var(--text-color2);
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title {
+  text-align: center;
+  font-family: "Merienda", sans-serif;
+  font-weight: 800;
+}
+
+.illustration-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.illustration-img {
+  width: 300px;
+  height: 300px;
+  background-image: url("/static/SVGs/computer.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.m-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--main-p-color);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project {
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  height: 200px;
+}
+
+/* ---------- About ---------- */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  overflow: visible;
+  color: var(--text-color);
+}
+
+.about-glass,
+.about-content,
+.skills-container {
+  border: 2px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  width: 100%;
+}
+
+.about-glass h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.about-glass p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+}
+.about-glass span {
+  color: var(--main-color);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech,
+.skills {
+  flex: 1 1 300px;
+}
+
+.tech-list,
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tech-item,
+.skill-item {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: var(--secondary-background);
+  color: var(--text-color2);
+}
+
+/* Blobs */
+.blob {
+  overflow: visible;
+  filter: blur(10px);
+  position: absolute;
+  z-index: 0;
+}
+
+.blob-1 {
+  left: 50%;
+  width: 50vw;
+  height: 25vh;
+}
+.blob-2 {
+  bottom: 30%;
+  width: 25vw;
+  height: 25vh;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--secondary-background);
+  color: var(--text-color2);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--footer-link);
+  font-size: 1.5rem;
+}
+
+footer a:hover {
+  position: relative;
+  top: -2px;
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 1024px) {
+  .main-title h1 {
+    font-size: 2rem;
+  }
+  .main-content p {
+    font-size: 1rem;
+  }
+  .about-glass h1 {
+    font-size: 2rem;
+  }
+  .about-glass p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .illustration-div {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .navbar-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-title h1 {
+    font-size: 1.5rem;
+  }
+  .main-content p {
+    font-size: 0.9rem;
+  }
+  .about-glass h1 {
+    font-size: 1.5rem;
+  }
+  .about-glass p {
+    font-size: 0.9rem;
+  }
+}

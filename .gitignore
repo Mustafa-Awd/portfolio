@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# FastAPI/Uvicorn
+*.db
+*.sqlite3
+*.pyc
+
+# Node/npm (in case you use JS assets)
+node_modules/
