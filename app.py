@@ -1,3 +1,5 @@
+import os
+import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -23,3 +25,7 @@ async def certificate_page(request: Request):
 async def project_page(request: Request, project_name: str):
     return templates.TemplateResponse(f"projects/{project_name}.html", {"request": request})
 
+# This is the key part for Railway
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # default 8000 for local testing
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
