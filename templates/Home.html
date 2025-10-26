@@ -1,61 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-
-    <!-- font import -->
-    <!-- Zain -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Merindo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Zain:wght@200;300;400;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- style link -->
-    <link rel="stylesheet" href="/static/style.css?v=1.0.1" />
-    <!-- Icons -->
-    <script
-      src="https://kit.fontawesome.com/bcff5140a3.js"
-      crossorigin="anonymous"
-    ></script>
+    {% include 'head.html' %}
   </head>
-
   <body>
     <header>
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <a href="/" aria-label="Home">Home</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#about" aria-label="About Us">About</a>
-          </li>
-          <div class="logo" id="theme-toggle">
-            <img
-              src="/static/SVGs/star.svg"
-              alt="Logo"
-              height="30"
-              width="30"
-            />
-          </div>
-          <li class="navbar-item">
-            <a href="/certificates" aria-label="Our Portfolio">Certificates</a>
-          </li>
-          <li class="navbar-item">
-            <a href="#footer" aria-label="Contact Us">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      {%include 'navbar.html'%}
+
       <main>
         <div class="main-title">
           <h1>Based in UAE</h1>
@@ -82,12 +33,12 @@
     </header>
 
     <div class="projects">
-      <a class="project" href="/projectA"></a>
-      <a class="project" href="/projectB"></a>
-      <a class="project" href="/projectC"></a>
-      <a class="project" href="/projectD"></a>
-      <a class="project" href="/projectE"></a>
-      <a class="project" href="/projectF"></a>
+      <a class="project" href="/projects/projectA"></a>
+      <a class="project" href="/projects/projectB"></a>
+      <a class="project" href="/projects/projectC"></a>
+      <a class="project" href="/projects/projectD"></a>
+      <a class="project" href="/projects/projectE"></a>
+      <a class="project" href="/projects/projectF"></a>
     </div>
 
     <div class="about" id="about">
@@ -166,31 +117,6 @@
         </div>
       </div>
     </div>
-    <footer id="footer">
-      <p><i class="fa-regular fa-copyright"></i> 2024 My Portfolio Website</p>
-      <h1 class="contact-icons">
-        <a
-          href="https://www.linkedin.com/in/moustapha-awad-127066320/"
-          target="_blank"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </h1>
-      <h1 class="contact-icons">
-        <a href="mailto:musti.h.awad@gmail.com" target="_blank"
-          ><i class="fa-brands fa-google"></i
-        ></a>
-      </h1>
-      <h1>
-        <a href="https://github.com/Mustafa-Awd" target="_blank"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
-      </h1>
-    </footer>
+    {% include 'footer.html'%}
   </body>
-  <script>
-    const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-theme");
-    });
-  </script>
 </html>

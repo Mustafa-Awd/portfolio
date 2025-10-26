@@ -1153,6 +1153,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "scikit-learn" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
@@ -1162,6 +1163,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.3.3" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "scikit-learn", specifier = ">=1.7.2" },
+    { name = "uvicorn", specifier = ">=0.37.0" },
 ]
 
 [[package]]

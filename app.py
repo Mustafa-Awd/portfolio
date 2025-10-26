@@ -21,6 +21,6 @@ async def home(request: Request):
 async def certificate_page(request: Request):
     return templates.TemplateResponse("certificates/certificates.html", {"request": request})
 
-@app.get("/{project_name}", response_class=HTMLResponse)
+@app.get("/projects/{project_name}", response_class=HTMLResponse)
 async def project_page(request: Request, project_name: str):
     return templates.TemplateResponse(f"projects/{project_name}.html", {"request": request})
