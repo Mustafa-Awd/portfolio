@@ -311,3 +311,39 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
+
+/* ---------- Form Styles ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: var(black);
+  font-size: 1rem;
+  cursor: pointer;
+}
+form input {
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+form input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+}
+
+form button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

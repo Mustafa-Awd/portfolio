@@ -9,90 +9,61 @@
       {% include 'navbar.html' %}
       <main>
         <div>
-          <h1>Loan approval predictor</h1>
-          <form method="POST">
-            <label for=""></label>
+          <h1>Student Performance Predictor</h1>
+          <form method="POST" , action="/predict">
+            <input type="hidden" name="project_name" value="projectA" />
+            <label for="Hours_Studied">Hours Studied</label>
+            <input
+              type="text"
+              name="Hours_Studied"
+              id="Hours_Studied"
+              value="{{ student.Hours_Studied if student else '' }}"
+            />
+
+            <label for="Previous_Score">Previous Score</label>
+            <input
+              type="text"
+              name="Previous_Score"
+              id="Previous_Score"
+              value="{{ student.Previous_Score if student else '' }}"
+            />
+
+            <label for="Extracurricular_Activities"
+              >Extracurricular Activities</label
+            >
+            <input
+              type="text"
+              name="Extracurricular_Activities"
+              id="Extracurricular_Activities"
+              value="{{ student.Extracurricular_Activities if student else '' }}"
+            />
+
+            <label for="Sleep_Hours">Sleep Hours</label>
+            <input
+              type="text"
+              name="Sleep_Hours"
+              id="Sleep_Hours"
+              value="{{ student.Sleep_Hours if student else '' }}"
+            />
+
+            <label for="Sample_Question_Papers_Practiced"
+              >Sample Question Papers Practiced</label
+            >
+            <input
+              type="text"
+              name="Sample_Question_Papers_Practiced"
+              id="Sample_Question_Papers_Practiced"
+              value="{{ student.Sample_Question_Papers_Practiced if student else '' }}"
+            />
+
+            <button type="submit">Submit</button>
+            {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+            {% endif%}
           </form>
         </div>
       </main>
     </header>
-
-    <div class="about" id="about">
-      <div class="about">
-        <!-- blobs start -->
-        <img
-          src="/static/vid/blob-1.gif"
-          alt="green-blob-1"
-          class="blob blob-1"
-        />
-        <img
-          src="/static/vid/blob-2.gif"
-          alt="green-blob-1"
-          class="blob blob-2"
-        />
-        <!-- Blobs end -->
-        <div class="about-glass">
-          <div>
-            <h1>Hi, I'am Moustapha Hassan</h1>
-          </div>
-          <p><span>A student</span> & <span>software enthusiast</span></p>
-        </div>
-
-        <div class="about-content">
-          <p>
-            <!-- I enjoy creating machine learning models and web pages. currently I
-            am working on the basics of Q-learning, a reinforcement learning
-            algorithm. So far it has proven hard to crack. However, I am
-            determined to master it. After all it is the main algorithm that has
-            sparked my passion for machine learning. -->
-            I have a passion for creating machine learning models and web pages.
-            Right now, I'm diving into the fundamentals of Q-learning, a
-            cornerstone of reinforcement learning. It’s proving to be a tough
-            nut to crack, but I’m determined to master it. After all, this very
-            algorithm ignited my passion for machine learning in the first
-            place.
-          </p>
-          <p>
-            Over the years, I've gained a wealth of knowledge and honed a
-            variety of practical skills. I've delved into web development,
-            explored simple data processing, and become familiar with key
-            machine learning algorithms like KNN, SVM, and ANNs.
-          </p>
-          <p>
-            While I have a foundational understanding of artificial neural
-            networks (ANNs), I’m eager to delve deeper into their inner
-            workings. That’s why I’m passionate about pursuing a degree in
-            Computer Science, with a focus on artificial intelligence. I’m
-            particularly excited about the prospect of combining deep neural
-            networks with Q-learning to push the boundaries of what’s possible
-            in machine learning.
-          </p>
-        </div>
-        <div class="skills-container">
-          <div class="tech">
-            <h1>Technologies</h1>
-            <div class="tech-list">
-              <div class="tech-item">HTML</div>
-              <div class="tech-item">CSS</div>
-              <div class="tech-item">JS</div>
-              <div class="tech-item">Python</div>
-              <div class="tech-item">scikit-learn</div>
-              <div class="tech-item">TensorFlow</div>
-            </div>
-          </div>
-          <div class="skills">
-            <h1>Skills</h1>
-            <div class="skill-list">
-              <div class="skill-item">Problem Solving</div>
-              <div class="skill-item">Leadership</div>
-              <div class="skill-item">Communication</div>
-              <div class="skill-item">Team Work</div>
-              <div class="skill-item">Critical Thinking</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     {% include 'footer.html' %}
   </body>
 </html>
