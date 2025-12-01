@@ -39,7 +39,7 @@ fastapi-cli==0.0.14
     # via fastapi
 fastapi-cloud-cli==0.3.1
     # via fastapi-cli
-fonttools==4.60.1
+fonttools==4.61.0
     # via matplotlib
 h11==0.16.0
     # via
