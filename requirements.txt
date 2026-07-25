@@ -84,7 +84,7 @@ packaging==25.0
     # via matplotlib
 pandas==2.3.3
     # via website (pyproject.toml)
-pillow==12.1.1
+pillow==12.3.0
     # via matplotlib
 pydantic==2.12.3
     # via
