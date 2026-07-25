@@ -102,7 +102,7 @@ python-dateutil==2.9.0.post0
     #   pandas
 python-dotenv==1.2.2
     # via uvicorn
-python-multipart==0.0.20
+python-multipart==0.0.31
     # via fastapi
 pytz==2025.2
     # via pandas
